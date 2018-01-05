@@ -13,7 +13,9 @@ html {
   justify-content: center;
   padding: 0 2rem;
   height: 100%;
-  font-family: sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
+
+  /* font-family: sans-serif; */
   text-align: center;
   color: #888;
 }

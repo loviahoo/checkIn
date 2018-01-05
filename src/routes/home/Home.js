@@ -8,38 +8,66 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
+import cx from 'classnames';
 
 class Home extends React.Component {
-  static propTypes = {
-    news: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        content: PropTypes.string,
-      }),
-    ).isRequired,
-  };
+  // static propTypes = {
+  //   news: PropTypes.arrayOf(
+  //     PropTypes.shape({
+  //       title: PropTypes.string.isRequired,
+  //       link: PropTypes.string.isRequired,
+  //       content: PropTypes.string,
+  //     }),
+  //   ).isRequired,
+  // };
 
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>React.js News</h1>
-          {this.props.news.map(item => (
-            <article key={item.link} className={s.newsItem}>
-              <h1 className={s.newsTitle}>
-                <a href={item.link}>{item.title}</a>
-              </h1>
-              <div
-                className={s.newsDesc}
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{ __html: item.content }}
-              />
-            </article>
-          ))}
+          <div className={s.formContainer}>
+            <form className={s.formVerticle}>
+              <div className={s.formHead}>Sign In</div>
+              <div className={s.formBody}>
+                <div className={s.controlGroup}>
+                  <div className={s.rowFluid}>
+                    <input
+                      className={s.inputSpan}
+                      type="text"
+                      id="inputName"
+                      placeholder="Username"
+                    />
+                  </div>
+                </div>
+                <div className={s.controlGroup}>
+                  <div className={s.rowFluid}>
+                    <input
+                      className={s.inputSpan}
+                      type="text"
+                      id="inputPassword"
+                      placeholder="Password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className={s.formFoot}>
+                <div className={s.controlGroup}>
+                  <div className={s.clearfix}>
+                    <button type="submit" className={s.btnPrimary}>
+                      Login
+                    </button>
+                    <label className={s.checkBox}>
+                      <input type="checkbox" />
+                      &nbsp;&nbsp;Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

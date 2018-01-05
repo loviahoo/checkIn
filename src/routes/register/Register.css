@@ -10,12 +10,195 @@
 @import '../../components/variables.css';
 
 .root {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background: url('./bg_banner.jpg') center center no-repeat;
+  background-size: 100%;
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
-  padding: 0 0 40px;
+  padding: 1px 0 2.5rem;
   max-width: var(--max-content-width);
+
+  /* overflow: hidden; */
+}
+
+.formContainer {
+  position: absolute;
+  top: 2.5rem; 
+  left: 58%; 
+  width: 21.56rem;
+  box-sizing: border-box;
+  padding-right: 0.94rem;
+  padding-left: 0.94rem;
+  box-shadow: 0 0 1.25rem #ccc;
+  background: #fff;
+}
+
+.formContainer h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: rgb(77, 77, 77); 
+}
+
+.formGroup {
+  margin-bottom: 0.5rem;
+}
+
+.alert {
+  padding: 0.94rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.pullRight {
+  float: right;
+}
+
+.alertSuccess {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.formContainer label {
+  font-size: 0.875rem;
+  font-weight: 300;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.srOnly {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.31rem;
+
+}
+
+.formControl {
+  box-sizing: border-box;  
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  height: 3.125rem;
+  padding: 0.375rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+input {
+  -webkit-appearance: textfield;
+  -webkit-rtl-ordering:logical;
+  user-select: text;
+  cursor: auto;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-align: start;
+  -webkit-writing-mode: horizontal-tb;
+  outline: none;  
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+.submitBtn {
+  -webkit-appearance: button;
+  cursor: pointer;
+  height: 2.4rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  border: none;
+  background: #3cc;
+  color: #fff;
+  -webkit-box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
+  -moz-box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
+  -o-box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
+  box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  margin-top: -3.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px){
+  .root {
+    height: 25rem;      
+  } 
+  
+  .formGroup {
+    margin-bottom: 0.3rem;
+    font-size: 0.5rem
+  }
+  
+}
+
+@media (max-width: 1399px){
+  .root {
+    height: 30rem;      
+  } 
+
+  .formContainer {
+    width: 18.56rem;
+  }
+
+  .formGroup {
+    margin-bottom: 0.3rem;
+    font-size: 0.5rem
+  }
+
+  .formControl {
+    font-size: 0.6rem;
+    height: 2.125rem;
+  }
+}
+
+@media (min-width: 1400px){
+  .root {
+    height: 45rem;      
+  } 
 }

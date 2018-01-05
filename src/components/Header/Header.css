@@ -10,12 +10,16 @@
 @import '../variables.css';
 
 :root {
-  --brand-color: #61dafb;
+  /* --brand-color: #61dafb; */
+  --brand-color: #333;  
 }
 
 .root {
-  background: #373277;
-  color: #fff;
+  background: #fff;
+
+  /* background: red; */
+  color: #333;
+  border-bottom: 1px solid #bbb;
 }
 
 .container {
@@ -24,10 +28,32 @@
   max-width: var(--max-content-width);
 }
 
+.formContainer {
+  margin-top: 80px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .brand {
   color: color(var(--brand-color) lightness(+10%));
   text-decoration: none;
-  font-size: 1.75em; /* ~28px */
+  font-size: 1.25em; /* ~28px */
+  font-weight: bold;
 }
 
 .brandTxt {

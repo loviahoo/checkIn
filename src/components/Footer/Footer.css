@@ -10,19 +10,25 @@
 @import '../variables.css';
 
 .root {
-  background: #333;
-  color: #fff;
+  color: #555;
+  border-top: 1px solid #bbb;
 }
 
 .container {
+  /* background: red; */
   margin: 0 auto;
   padding: 20px 15px;
   max-width: var(--max-content-width);
-  text-align: center;
+  text-align: left;
+  font-weight: bold;
 }
 
 .text {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(85, 85, 85, 0.5);
+}
+
+.righttext {
+  color: rgba(153, 153, 153, 0.5);
 }
 
 .spacer {
@@ -32,7 +38,7 @@
 .text,
 .link {
   padding: 2px 5px;
-  font-size: 1em;
+  font-size: 0.85em;
 }
 
 .link,
