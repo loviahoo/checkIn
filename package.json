@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "web",
   "version": "0.0.0",
   "private": true,
@@ -141,5 +142,23 @@
     "render": "babel-node tools/run render",
     "serve": "babel-node tools/run runServer",
     "start": "babel-node tools/run start"
+=======
+  "name": "my-show",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.0",
+    "react-scripts": "1.0.17",
+    "redux": "^3.6.0"    
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+>>>>>>> 62bb302d0182948f03de12ed30a35ad619ff0a2c
   }
 }
